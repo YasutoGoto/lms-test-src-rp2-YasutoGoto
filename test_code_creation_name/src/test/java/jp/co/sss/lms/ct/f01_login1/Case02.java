@@ -51,7 +51,6 @@ public class Case02 {
 	@Order(2)
 	@DisplayName("テスト02 DBに登録されていないユーザーでログイン")
 	void test02() {
-		// TODO ここに追加
 		// ログインIDを入力
 		WebElement loginId = webDriver.findElement(By.id("loginId"));
 		loginId.clear();
@@ -69,8 +68,8 @@ public class Case02 {
 		// エラーメッセージの表示を待つ
 		visibilityTimeout(By.className("help-inline"), 5);
 
-		WebElement erroMesseg = webDriver.findElement(By.className("help-inline"));
-		assertEquals("* ログインに失敗しました。", erroMesseg.getText());
+		WebElement errrorMessage = webDriver.findElement(By.className("help-inline"));
+		assertEquals("* ログインに失敗しました。", errrorMessage.getText());
 
 		getEvidence(new Object() {
 		});
