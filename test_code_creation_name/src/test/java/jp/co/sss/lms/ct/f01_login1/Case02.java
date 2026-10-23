@@ -38,7 +38,6 @@ public class Case02 {
 	@Order(1)
 	@DisplayName("テスト01 トップページURLでアクセス")
 	void test01() {
-		// TODO ここに追加
 		goTo("http://localhost:8080/lms/");
 
 		assertEquals("ログイン | LMS", webDriver.getTitle());
